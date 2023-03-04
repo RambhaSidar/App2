@@ -11,7 +11,7 @@ pipeline{
         }   
         stage('Build Maven'){
             steps{
-                 bat 'mvn clean install -f App2/pom.xml'
+                 sh 'mvn clean install -f App2/pom.xml'
             }
         }
     }
