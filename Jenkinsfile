@@ -16,5 +16,20 @@ pipeline {
                 bat 'mvn clean install'
             }
         }
+       stage('Build Docker image'){
+           steps{
+               script{
+                   bat 'docker build -t rambhasidar/app .'
+               }
+           }
+       }
+       stage('Push image to DockerHub'){
+           steps{
+               script{
+                   bat 'docker login -u rambhasidar -p dckr_pat_2-uMfhgJZlngZBXwZHYDDWrfvdw'
+                    bat 'docker push rambhasidar/app'
+               }
+           }
+       }
     }
 }
