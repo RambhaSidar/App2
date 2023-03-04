@@ -1,18 +1,7 @@
-pipeline{
-    agent any
-    tools{
-        maven "MAVEN_HOME"
-    }
-    stages{
-          stage('Clone Code'){
-            steps{
-            checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/RambhaSidar/App2.git']])  
-                   }
-        }   
-        stage('Build Maven'){
-            steps{
-                 sh 'mvn clean install -f App2/pom.xml'
-            }
-        }
+node {
+    stage('cloning git repo') {
+        git branch: 'main', url:'https://github.com/RambhaSidar/App2.git''
+        sh "chmod +x -R ./jenkins"
+        sh "./jenkins/script/scripted_pipeline_ex_2.sh"
     }
 }
