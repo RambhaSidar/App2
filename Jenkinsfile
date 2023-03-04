@@ -16,6 +16,13 @@ pipeline {
                 bat 'mvn clean install -DskipTests'
             }
         }
+        stage('Code Quality'){
+           steps{
+               withSonarQubeEnv('SonarQube'){
+               bat 'mvn sonar:sonar -f BootTest/pom.xml'
+               }
+           }
+       }
        stage('Build Docker image'){
            steps{
                script{
