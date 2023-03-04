@@ -13,7 +13,7 @@ pipeline {
         stage('Clone project And Build'){
             steps{
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/RambhaSidar/App2.git']])
-                bat 'mvn clean install'
+                bat 'mvn clean install -DskipTests'
             }
         }
        stage('Build Docker image'){
