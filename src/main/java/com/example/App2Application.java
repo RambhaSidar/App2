@@ -1,14 +1,14 @@
-package com.jt;
+package com.example;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
-public class JunitTestPipelineApplication {
+public class App2Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(JunitTestPipelineApplication.class, args);
+		SpringApplication.run(App2Application.class, args);
 	}
 
 }
