@@ -1,8 +1,6 @@
 package com.example.service;
 
 import java.util.List;
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,8 +21,8 @@ public class PersonService {
 		return repo.findAll();
 	}
 
-	public Optional<Person> getPersonById(int id) {
-		return repo.findById(id);
+	public Person getPersonById(int id) {
+		return repo.findById(id).orElseThrow(()->new RuntimeException("not present"));
 	}
 
 	public Person updatePerson(Person p, int id) {
