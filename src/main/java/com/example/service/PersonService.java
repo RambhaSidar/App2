@@ -7,7 +7,10 @@ import org.springframework.stereotype.Service;
 import com.example.model.Person;
 import com.example.repo.PersonRepository;
 
+import lombok.RequiredArgsConstructor;
+
 @Service
+@RequiredArgsConstructor
 public class PersonService {
 	@Autowired
 	private PersonRepository repo;
