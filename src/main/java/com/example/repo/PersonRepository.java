@@ -12,5 +12,4 @@ public interface PersonRepository extends JpaRepository<Person, Integer>{
 
 	List<Person> findByName(String string);
 
-
 }
