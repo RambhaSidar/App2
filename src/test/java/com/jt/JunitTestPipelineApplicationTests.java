@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.jt;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class App2ApplicationTests {
+class JunitTestPipelineApplicationTests {
 
 	@Test
 	void contextLoads() {

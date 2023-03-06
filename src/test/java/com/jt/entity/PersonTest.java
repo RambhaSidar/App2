@@ -1,11 +1,10 @@
-package com.example.demo.model;
+package com.jt.entity;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
 class PersonTest {
-    
 	Person p=new Person();
 	@Test
 	void testPerson() {
